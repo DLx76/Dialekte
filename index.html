@@ -9251,6 +9251,14 @@ Polizei = Bolizei
 furchtbar = färchterlich`
 };
 
+/* Reihenfolge der Kacheln: Favoriten zuerst, Rest alphabetisch */
+const FIRST = ["gotha","sachsen","goethe","mansfeld","oberbayern","wien","tirol"];
+DIALECTS.sort((a,b)=>{
+  const ia=FIRST.indexOf(a.id), ib=FIRST.indexOf(b.id);
+  if (ia>=0 || ib>=0) return (ia<0?99:ia)-(ib<0?99:ib);
+  return a.name.localeCompare(b.name,"de");
+});
+
 /* =========================================================
    LAUTREGELN – greifen nur auf Wörter, die NICHT im
    Wörterbuch stehen (Wörterbuch-Treffer bleiben unberührt)

@@ -1,6 +1,6 @@
 // Service Worker: hält die App offline verfügbar.
 // Bei jeder neuen Version der App die Versionsnummer hochzählen.
-const CACHE = "dialekte-v16";
+const CACHE = "dialekte-v17";
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
   "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./apple-touch-icon.png"];
 
